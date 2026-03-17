@@ -79,6 +79,15 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.25re
 .ci-v{font-family:Georgia,serif;font-size:.92rem;color:#2C2C28}
 
 /* LIGHTBOX */
+/* VIDEO MODAL */
+.vm-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:1000;display:none;align-items:center;justify-content:center}
+.vm-overlay.open{display:flex}
+.vm-wrap{position:relative;width:88vw;max-width:900px}
+.vm-close{position:absolute;top:-2.5rem;right:0;background:none;border:none;color:rgba(255,255,255,.5);font-size:1.5rem;cursor:pointer;transition:color .2s}
+.vm-close:hover{color:#C8860A}
+.vm-inner{position:relative;padding-bottom:56.49%;height:0}
+.vm-inner iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+
 .lb-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:1000;display:none;align-items:center;justify-content:center;flex-direction:column;gap:1rem}
 .lb-overlay.open{display:flex}
 .lb-img{max-width:88vw;max-height:78vh;object-fit:contain;border:1px solid rgba(255,255,255,.1)}
@@ -179,7 +188,7 @@ footer p{font-size:.62rem;color:#B0ACA6;letter-spacing:.06em;font-weight:300}
       <h2 class="st">Projects</h2>
       <div class="pc">
         <div><div class="pc-tags"><span class="ptg">ML</span><span class="ptg">Python</span><span class="ptg">Healthcare</span></div><div class="pc-num">01</div></div>
-        <div><h3 class="pc-title">CardioScope</h3><p class="pc-sub">Cardiovascular Risk Screening Model</p><p class="pc-desc">An ML model trained on ~420,000 records. Achieved 88% recall using Random Forest with SMOTE and cost-sensitive learning to handle class imbalance in a high-stakes medical context.</p><div class="pc-det">Random Forest / SMOTE / scikit-learn / XGBoost</div><a href="https://www.loom.com/share/c44e2b58a25742b1a4c3660e126e1a7b" target="_blank" rel="noopener" class="pc-screenshots" style="display:inline-flex;margin-top:.75rem">&#9654; Watch Demo</a></div>
+        <div><h3 class="pc-title">CardioScope</h3><p class="pc-sub">Cardiovascular Risk Screening Model</p><p class="pc-desc">An ML model trained on ~420,000 records. Achieved 88% recall using Random Forest with SMOTE and cost-sensitive learning to handle class imbalance in a high-stakes medical context.</p><div class="pc-det">Random Forest / SMOTE / scikit-learn / XGBoost</div><button class="pc-screenshots" style="margin-top:.75rem" onclick="openVideo('https://www.loom.com/embed/c44e2b58a25742b1a4c3660e126e1a7b')">&#9654; Watch Demo</button></div>
         <div class="pc-arr">&#8599;</div>
       </div>
       <div class="pc">
@@ -314,6 +323,16 @@ footer p{font-size:.62rem;color:#B0ACA6;letter-spacing:.06em;font-weight:300}
   </div>
 
 </div>
+<!-- Video Modal -->
+<div class="vm-overlay" id="videoModal" onclick="closeVideoOutside(event)">
+  <div class="vm-wrap">
+    <button class="vm-close" onclick="closeVideo()">&#215;</button>
+    <div class="vm-inner">
+      <iframe id="vm-iframe" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
 <!-- Lightbox -->
 <div class="lb-overlay" id="lightbox" onclick="closeLightboxOutside(event)">
   <button class="lb-close" onclick="closeLightbox()">&#215;</button>
@@ -339,6 +358,19 @@ function goTo(id) {
     if (a.getAttribute('onclick') && a.getAttribute('onclick').includes(id)) a.classList.add('active-link');
   });
 }
+
+function openVideo(src) {
+  document.getElementById('vm-iframe').src = src;
+  document.getElementById('videoModal').classList.add('open');
+}
+function closeVideo() {
+  document.getElementById('vm-iframe').src = '';
+  document.getElementById('videoModal').classList.remove('open');
+}
+function closeVideoOutside(e) { if (e.target.id === 'videoModal') closeVideo(); }
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeVideo();
+});
 
 const lbImages = [
   'images/forecast/forecast-1-welcome.png',
