@@ -1,0 +1,66 @@
+<svg width="880" height="200" viewBox="0 0 880 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="background:#F8F5F0">
+
+  <!-- Step numbers -->
+  <text x="70" y="52" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#C8860A" letter-spacing="2">01</text>
+  <text x="210" y="52" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#C8860A" letter-spacing="2">02</text>
+  <text x="350" y="52" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#C8860A" letter-spacing="2">03</text>
+  <text x="490" y="52" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#C8860A" letter-spacing="2">04</text>
+  <text x="630" y="52" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#C8860A" letter-spacing="2">05</text>
+  <text x="790" y="52" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#C8860A" letter-spacing="2">06</text>
+
+  <!-- 1. Data Ingestion -->
+  <rect x="10" y="60" width="120" height="80" stroke="#E2DED8" stroke-width="1" fill="#F8F5F0"/>
+  <text x="70" y="88" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#2C2C28" font-weight="600">Data</text>
+  <text x="70" y="103" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#2C2C28" font-weight="600">Ingestion</text>
+  <text x="70" y="122" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#9A9490">Survey &amp; employee</text>
+
+  <!-- Arrow 1 -->
+  <line x1="130" y1="100" x2="148" y2="100" stroke="#C8860A" stroke-width="1.25"/>
+  <polygon points="148,96 156,100 148,104" fill="#C8860A"/>
+
+  <!-- 2. Merge & Clean -->
+  <rect x="156" y="60" width="108" height="80" stroke="#E2DED8" stroke-width="1" fill="#F8F5F0"/>
+  <text x="210" y="88" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#2C2C28" font-weight="600">Merge &amp;</text>
+  <text x="210" y="103" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#2C2C28" font-weight="600">Clean</text>
+  <text x="210" y="122" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#9A9490">Filter &amp; version</text>
+
+  <!-- Arrow 2 -->
+  <line x1="264" y1="100" x2="282" y2="100" stroke="#C8860A" stroke-width="1.25"/>
+  <polygon points="282,96 290,100 282,104" fill="#C8860A"/>
+
+  <!-- 3. Analysis -->
+  <rect x="290" y="60" width="120" height="80" stroke="#E2DED8" stroke-width="1" fill="#F8F5F0"/>
+  <text x="350" y="88" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#2C2C28" font-weight="600">Analysis</text>
+  <text x="350" y="122" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#9A9490">Insights &amp; taxonomy</text>
+
+  <!-- Arrow 3 -->
+  <line x1="410" y1="100" x2="428" y2="100" stroke="#C8860A" stroke-width="1.25"/>
+  <polygon points="428,96 436,100 428,104" fill="#C8860A"/>
+
+  <!-- 4. Chart Generation -->
+  <rect x="436" y="60" width="108" height="80" stroke="#E2DED8" stroke-width="1" fill="#F8F5F0"/>
+  <text x="490" y="88" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#2C2C28" font-weight="600">Chart</text>
+  <text x="490" y="103" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#2C2C28" font-weight="600">Generation</text>
+  <text x="490" y="122" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#9A9490">Validated visuals</text>
+
+  <!-- Arrow 4 -->
+  <line x1="544" y1="100" x2="562" y2="100" stroke="#C8860A" stroke-width="1.25"/>
+  <polygon points="562,96 570,100 562,104" fill="#C8860A"/>
+
+  <!-- 5. PPT Assembly -->
+  <rect x="570" y="60" width="120" height="80" stroke="#C8860A" stroke-width="1" fill="#FDF6E8"/>
+  <text x="630" y="88" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#2C2C28" font-weight="600">Report</text>
+  <text x="630" y="103" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#2C2C28" font-weight="600">Assembly</text>
+  <text x="630" y="122" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#9A9490">Auto-generated PPT</text>
+
+  <!-- Arrow 5 -->
+  <line x1="690" y1="100" x2="708" y2="100" stroke="#C8860A" stroke-width="1.25"/>
+  <polygon points="708,96 716,100 708,104" fill="#C8860A"/>
+
+  <!-- 6. Output -->
+  <rect x="716" y="60" width="154" height="80" stroke="#2C2C28" stroke-width="1" fill="#2C2C28"/>
+  <text x="793" y="92" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#F8F5F0" font-weight="600">Production</text>
+  <text x="793" y="107" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#F8F5F0" font-weight="600">Ready</text>
+  <text x="793" y="124" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#C8860A">Versioned outputs</text>
+
+</svg>
